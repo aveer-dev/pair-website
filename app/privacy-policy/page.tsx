@@ -1,110 +1,40 @@
-import Link from 'next/link';
-import Image from 'next/image';
+import { LegalLayout } from '@/components/LegalLayout';
 
 export default function PrivacyPolicy() {
+    const sections = [
+        { id: 'scope', title: 'Scope and Application' },
+        { id: 'information-we-collect', title: 'Information We Collect' },
+        { id: 'lawful-basis', title: 'Lawful Basis for Processing' },
+        { id: 'how-we-use', title: 'How We Use Personal Data' },
+        { id: 'sharing-disclosure', title: 'Data Sharing and Disclosure' },
+        { id: 'us-privacy-rights', title: 'US Privacy Rights' },
+        { id: 'international-transfers', title: 'International Data Transfers' },
+        { id: 'data-security', title: 'Data Security' },
+        { id: 'data-retention', title: 'Data Retention' },
+        { id: 'your-rights', title: 'Your Rights Outside US' },
+        { id: 'cookies', title: 'Cookies and Tracking' },
+        { id: 'changes', title: 'Changes to This Policy' },
+        { id: 'contact', title: 'Contact Information' },
+    ];
+
+    const intro = (
+        <div className="space-y-4">
+            <p>
+                At Pair, we believe that privacy is foundational to trust in financial systems. This Privacy Policy explains how Pair Financial Technologies, Inc. and its affiliates (&quot;Pair&quot;, &quot;we&quot;, &quot;us&quot;, or &quot;our&quot;) collect, use, share, store, and protect personal data when you access or use our websites, applications, APIs, and financial products (collectively, the &quot;Services&quot;).
+            </p>
+            <p>
+                We design our Services to minimise data collection, protect confidentiality, and comply with applicable data protection and financial regulations globally, including GDPR, UK GDPR, CCPA/CPRA, and other applicable US state privacy laws.
+            </p>
+        </div>
+    );
+
     return (
-        <div className="bg-white dark:bg-[#0a0a0a] text-gray-900 dark:text-gray-100 transition-colors duration-200 antialiased min-h-screen">
-            {/* Navigation */}
-            <nav className="sticky top-0 z-50 w-full backdrop-blur-md bg-white/80 dark:bg-[#0a0a0a]/80 border-b border-gray-200 dark:border-[#262626]">
-                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                    <div className="flex items-center h-16">
-                        <div className="shrink-0 flex items-center gap-2">
-                            <Link href="/" className="flex items-center gap-2 group">
-                                <Image src="/pair-black.png" alt="Pair Logo" width={32} height={32} className="h-8 w-auto dark:hidden transition-transform group-hover:scale-105 duration-200" />
-                                <Image src="/pair-white.png" alt="Pair Logo" width={32} height={32} className="h-8 w-auto hidden dark:block transition-transform group-hover:scale-105 duration-200" />
-                            </Link>
-                        </div>
-                    </div>
-                </div>
-            </nav>
-
-            {/* Main Content */}
-            <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-20">
-                <div className="lg:grid lg:grid-cols-12 lg:gap-12">
-                    {/* Sidebar Navigation */}
-                    <aside className="hidden lg:block lg:col-span-3">
-                        <nav className="sticky top-28 space-y-1">
-                            <h3 className="uppercase text-xs font-semibold text-gray-500 dark:text-gray-500 tracking-wider mb-4 px-3">Contents</h3>
-                            <a className="group flex items-center px-3 py-2 text-sm font-medium bg-gray-100 dark:bg-[#171717] text-black dark:text-white rounded-md border-l-2 border-black dark:border-white" href="#scope">
-                                Scope and Application
-                            </a>
-                            <a
-                                className="group flex items-center px-3 py-2 text-sm font-medium text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white hover:bg-gray-50 dark:hover:bg-white/5 rounded-md border-l-2 border-transparent hover:border-gray-300 dark:hover:border-gray-600 transition-all"
-                                href="#information-we-collect">
-                                Information We Collect
-                            </a>
-                            <a
-                                className="group flex items-center px-3 py-2 text-sm font-medium text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white hover:bg-gray-50 dark:hover:bg-white/5 rounded-md border-l-2 border-transparent hover:border-gray-300 dark:hover:border-gray-600 transition-all"
-                                href="#lawful-basis">
-                                Lawful Basis for Processing
-                            </a>
-                            <a
-                                className="group flex items-center px-3 py-2 text-sm font-medium text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white hover:bg-gray-50 dark:hover:bg-white/5 rounded-md border-l-2 border-transparent hover:border-gray-300 dark:hover:border-gray-600 transition-all"
-                                href="#how-we-use">
-                                How We Use Personal Data
-                            </a>
-                            <a
-                                className="group flex items-center px-3 py-2 text-sm font-medium text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white hover:bg-gray-50 dark:hover:bg-white/5 rounded-md border-l-2 border-transparent hover:border-gray-300 dark:hover:border-gray-600 transition-all"
-                                href="#sharing-disclosure">
-                                Data Sharing and Disclosure
-                            </a>
-                            <a
-                                className="group flex items-center px-3 py-2 text-sm font-medium text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white hover:bg-gray-50 dark:hover:bg-white/5 rounded-md border-l-2 border-transparent hover:border-gray-300 dark:hover:border-gray-600 transition-all"
-                                href="#us-privacy-rights">
-                                US Privacy Rights
-                            </a>
-                            <a
-                                className="group flex items-center px-3 py-2 text-sm font-medium text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white hover:bg-gray-50 dark:hover:bg-white/5 rounded-md border-l-2 border-transparent hover:border-gray-300 dark:hover:border-gray-600 transition-all"
-                                href="#international-transfers">
-                                International Data Transfers
-                            </a>
-                            <a
-                                className="group flex items-center px-3 py-2 text-sm font-medium text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white hover:bg-gray-50 dark:hover:bg-white/5 rounded-md border-l-2 border-transparent hover:border-gray-300 dark:hover:border-gray-600 transition-all"
-                                href="#data-security">
-                                Data Security
-                            </a>
-                            <a
-                                className="group flex items-center px-3 py-2 text-sm font-medium text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white hover:bg-gray-50 dark:hover:bg-white/5 rounded-md border-l-2 border-transparent hover:border-gray-300 dark:hover:border-gray-600 transition-all"
-                                href="#data-retention">
-                                Data Retention
-                            </a>
-                            <a
-                                className="group flex items-center px-3 py-2 text-sm font-medium text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white hover:bg-gray-50 dark:hover:bg-white/5 rounded-md border-l-2 border-transparent hover:border-gray-300 dark:hover:border-gray-600 transition-all"
-                                href="#your-rights">
-                                Your Rights Outside US
-                            </a>
-                            <a
-                                className="group flex items-center px-3 py-2 text-sm font-medium text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white hover:bg-gray-50 dark:hover:bg-white/5 rounded-md border-l-2 border-transparent hover:border-gray-300 dark:hover:border-gray-600 transition-all"
-                                href="#cookies">
-                                Cookies and Tracking
-                            </a>
-                            <a
-                                className="group flex items-center px-3 py-2 text-sm font-medium text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white hover:bg-gray-50 dark:hover:bg-white/5 rounded-md border-l-2 border-transparent hover:border-gray-300 dark:hover:border-gray-600 transition-all"
-                                href="#changes">
-                                Changes to This Policy
-                            </a>
-                            <a
-                                className="group flex items-center px-3 py-2 text-sm font-medium text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white hover:bg-gray-50 dark:hover:bg-white/5 rounded-md border-l-2 border-transparent hover:border-gray-300 dark:hover:border-gray-600 transition-all"
-                                href="#contact">
-                                Contact Information
-                            </a>
-                        </nav>
-                    </aside>
-
-                    {/* Main Content Area */}
-                    <div className="lg:col-span-8 lg:col-start-4 prose prose-lg prose-slate dark:prose-invert max-w-none">
-                        {/* Header */}
-                        <div className="mb-12 border-b border-gray-200 dark:border-[#262626] pb-8">
-                            <h1 className="text-4xl md:text-5xl font-bold tracking-tight text-gray-900 dark:text-white mb-4">Privacy Policy</h1>
-                            <p className="text-gray-500 dark:text-gray-400 text-lg">Last updated: 19th December 2025</p>
-                            <p className="mt-6 text-xl leading-relaxed text-gray-600 dark:text-gray-300">
-                                At Pair, we believe that privacy is foundational to trust in financial systems. This Privacy Policy explains how Pair Financial Technologies, Inc. and its affiliates (&quot;Pair&quot;, &quot;we&quot;, &quot;us&quot;, or &quot;our&quot;) collect, use, share, store, and protect personal data when you access or use our websites, applications, APIs, and financial products (collectively, the &quot;Services&quot;).
-                            </p>
-                            <p className="mt-4 text-lg leading-relaxed text-gray-600 dark:text-gray-300">
-                                We design our Services to minimise data collection, protect confidentiality, and comply with applicable data protection and financial regulations globally, including GDPR, UK GDPR, CCPA/CPRA, and other applicable US state privacy laws.
-                            </p>
-                        </div>
-
+        <LegalLayout
+            title="Privacy Policy"
+            lastUpdated="19th December 2025"
+            intro={intro}
+            sections={sections}
+        >
                         {/* Section 1: Scope and Application */}
                         <section className="scroll-mt-32 mb-16" id="scope">
                             <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-6">1. Scope and Application</h2>
@@ -539,11 +469,7 @@ export default function PrivacyPolicy() {
                                 </div>
                             </div>
                         </section>
-                    </div>
-                </div>
-            </main>
-        </div>
+
+        </LegalLayout>
     );
 }
-
-
